@@ -20,7 +20,7 @@ my-wordpress-site/
 
 Create a file named `docker-compose.yml` in the root of your project directory with the following content:
 
-```yaml
+```
 version: '3.8'
 
 services:
@@ -64,7 +64,7 @@ services:
 volumes:
   db_data:
   wordpress_data:
-
+```
 
 
 Getting Started
@@ -74,36 +74,38 @@ Follow these steps to get the WordPress environment up and running:
 
 Start the services using Docker Compose:
 
-
+```
 docker-compose up -d
+```
 Verify the setup:
 
 Open your browser and navigate to http://localhost:8000 to access the WordPress installation page.
 Navigate to http://localhost:8080 to access phpMyAdmin.
 Stopping the Services
+
+
 To stop the services, run:
-
-
+```
 docker-compose down
+```
+
 Persisting Data
 The defined volumes (db_data and wordpress_data) ensure that data persists even if the containers are removed. The data is stored on your local machine, allowing you to start the containers again without losing data.
 
 Troubleshooting
 If you encounter any issues, check the logs of the services for more details:
 
-
+```
 docker-compose logs db
 docker-compose logs wordpress
 docker-compose logs phpmyadmin
+```
+
 Additional Notes
 Ensure Docker and Docker Compose are correctly installed and running on your machine.
 Adjust environment variables and ports as necessary to fit your setup.
 License
-This project is licensed under the MIT License.
 
-
-
-This `README.md` is formatted for a GitHub project and includes all the necessary steps and instructions to set up and run a WordPress, MySQL, and phpMyAdmin environment using Docker Compose. Make sure to adjust the repository URL and any other specific details to fit your project.
 
 
 
